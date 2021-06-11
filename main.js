@@ -16,13 +16,21 @@ let math = require('./math-tools.js');
 // console.log(math.multiply(1, 2));
 // console.log(math.divide(1, 2));
 
-const fs = require('fs')
+/* 코어 모듈 */
+// const fs = require('fs')
 
-let fileList = fs.readdirSync('.');
-console.log(fileList)
+// let fileList = fs.readdirSync('.');
+// console.log(fileList)
 
-fs.writeFileSync('new', 'Hello Node.js')
+// fs.writeFileSync('new', 'Hello Node.js')
 
-const os = require('os')
+// const os = require('os')
 
-console.log(os.cpus())
+// console.log(os.cpus())
+
+/* 서드파티 모듈 */
+const cowsay = require('cowsay')
+
+console.log(cowsay.say({
+    text: "I Love Typescript"
+}))
