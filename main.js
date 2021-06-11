@@ -41,8 +41,10 @@ const EventEmitter = require('events');
 
 const myEmitter = new EventEmitter();
 
-myEmitter.on('test', () => {
-    console.log('Success!')
+const obj = {type: 'text', data: 'Hello Codeit', date: '2020-09-01'};
+
+myEmitter.on('test', (info) => {
+    console.log(info);
 });
 
-myEmitter.emit('test');
+myEmitter.emit('test', obj);
