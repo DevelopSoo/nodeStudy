@@ -29,8 +29,20 @@ let math = require('./math-tools.js');
 // console.log(os.cpus())
 
 /* 서드파티 모듈 */
-const cowsay = require('cowsay')
+// const cowsay = require('cowsay')
 
-console.log(cowsay.say({
-    text: "I Love Typescript"
-}))
+// console.log(cowsay.say({
+//     text: "I Love Typescript"
+// }))
+
+
+/* 비동기 프로그램과 EventEmitter */
+const EventEmitter = require('events');
+
+const myEmitter = new EventEmitter();
+
+myEmitter.on('test', () => {
+    console.log('Success!')
+});
+
+myEmitter.emit('test');
